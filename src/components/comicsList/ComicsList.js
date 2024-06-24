@@ -11,7 +11,7 @@ const ComicsList = () => {
     const [offset, setOffset] = useState(0);
     const [comicsEnded, setComicsEnded] = useState(false);
 
-    const {loading, error, getAllCharacters} = useMarvelService();
+    const {loading, error, getAllComics} = useMarvelService();
 
     useEffect(() => {
         onRequest(offset, true);
@@ -19,7 +19,7 @@ const ComicsList = () => {
 
     const onRequest = (offset, initial) => {
         initial ? setNewItemLoading(false) : setNewItemLoading(true);
-        getAllCharacters(offset)
+        getAllComics(offset)
             .then(onComicsListLoaded);
     }
 

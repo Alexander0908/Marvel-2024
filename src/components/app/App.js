@@ -7,6 +7,7 @@ import ErrorBoundary from "../errorBoundary/ErrorBoundary";
 import ComicsList from "../comicsList/ComicsList";
 
 import decoration from '../../resources/img/vision.png';
+import TestComponent from "../testComponent/TestComponent";
 
 const App = () => {
     const [selectedChar, setChar] = useState(null);
@@ -17,10 +18,11 @@ const App = () => {
 
     return (
         <div className="app">
+            <TestComponent/>
             <AppHeader/>
             <main>
                 {/* {this.state.showRandomChar ? <RandomChar/> : null} */}
-                {/* <ErrorBoundary>
+                <ErrorBoundary>
                     <RandomChar/>
                 </ErrorBoundary>
                 <div className="char__content">
@@ -31,7 +33,7 @@ const App = () => {
                         <CharInfo charId={selectedChar}/>
                     </ErrorBoundary>
                 </div>
-                <img className="bg-decoration" src={decoration} alt="vision"/> */}
+                <img className="bg-decoration" src={decoration} alt="vision"/>
                 <ComicsList/>
             </main>
         </div>
