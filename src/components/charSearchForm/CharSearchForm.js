@@ -4,7 +4,7 @@ import * as Yup from 'yup';
 import {Link} from 'react-router-dom';
 
 import useMarvelService from '../../services/MarvelService';
-import ErrorMessage from '../errorMessage/ErrorMessage';
+import ErrorMessage from '../errorMessage/errorMessage';
 
 import './charSearchForm.scss';
 

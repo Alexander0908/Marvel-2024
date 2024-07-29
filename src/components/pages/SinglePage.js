@@ -4,7 +4,7 @@ import AppBanner from "../appBanner/AppBanner";
 
 import useMarvelService from '../../services/MarvelService';
 import Spinner from '../spinner/Spinner';
-import ErrorMessage from "../errorMessage/ErrorMessage";
+import ErrorMessage from "../errorMessage/errorMessage";
 import './singleComicPage.scss';
 
 const SinglePage = ({Component, dataType}) => {
