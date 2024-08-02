@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+Check the project on live - https://marvel-2024.vercel.app/ 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
