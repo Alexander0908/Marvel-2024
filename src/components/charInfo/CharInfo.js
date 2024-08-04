@@ -12,7 +12,7 @@ const CharInfo = (props) => {
 
     const [char, setChar] = useState(null);
 
-    const {loading, error, getCharacter, clearError} = useMarvelService();
+    const {loading, error, getCharacter, clearError, process, setProcess} = useMarvelService();
 
     useEffect(() => {
         updateChar();
@@ -27,10 +27,30 @@ const CharInfo = (props) => {
         clearError();
         getCharacter(charId)
             .then(onCharLoaded)
+            .then(() => setProcess('confirmed'))
     }
 
     const onCharLoaded = (char) => {
         setChar(char);
+    }
+
+    const setContent = (process, char) => {
+        switch (process) {
+            case 'waiting':
+                return <Skeleton/>;
+                break;
+            case 'loading':
+                return <Spinner/>
+                break;
+            case 'confirmed':
+                return <View char={char}/>;
+                break;
+            case 'error':
+                return <ErrorMessage/>;
+                break;
+            default:
+                throw new Error('Unexpected process state');
+        }
     }
 
     const skeleton = char || loading || error ? null : <Skeleton/>;
