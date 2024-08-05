@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Helmet } from "react-helmet";
 
-import './SingleComicLayout.scss';
+import './singleComicLayout.scss';
 
 const SingleComicLayout = ({ data }) => {
 
